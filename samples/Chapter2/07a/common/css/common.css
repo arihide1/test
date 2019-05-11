@@ -1,0 +1,585 @@
+@charset "UTF-8";
+
+/*基本設定
+-----------------------------------------*/
+* {
+margin: 0;
+padding: 0;
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+background: url(../img/trancepercent.png);
+}
+li {
+list-style: none;
+}
+a img {
+border: none;
+}
+img {
+vertical-align: bottom;
+}
+html {
+}
+body {
+padding: 0;
+margin: 0;
+position: relative;
+font-size: 14px;
+color: #000;
+line-height: 1.2;
+font-family: "Hiragino Kaku Gothic Pro","メイリオ","ＭＳ Ｐゴシック",sans-serif;
+background: #233e46;
+}
+a {
+color: #ED1E79;
+}
+a:hover {
+color: #C90059;
+}
+hr {
+border: none;
+height: 0;
+overflow: hidden;
+border-bottom: 1px dotted #959595;
+clear: both;
+}
+main, header, footer, section, article, figure ,figcaption {
+display: block;
+}
+body #wrapper {
+width: 1000px;
+margin: 0 auto;
+/*border-collapse: separate;
+border-spacing: 2px 0;*/
+}
+body > header:after,
+body > #wrapper:after {
+content: "";
+display: block;
+clear: both;
+height: 0;
+width: 0;
+}
+#sidebar {
+color: #FFF;
+width: 180px;
+background: #247486;
+margin-right: 20px;
+padding-top: 20px;
+float: left;
+}
+#mainContent {
+width: 800px;
+padding-top: 10px;
+float: left;
+}
+
+/* サイドバー #sidebar
+-----------------------------------------*/
+#sidebar header {
+margin: 0;
+position: relative;
+}
+#sidebar h1 {
+display: block;
+font-size: 35px;
+font-weight: normal;
+width: 180px;
+height: 180px;
+line-height: 180px;
+text-align: center;
+border: 3px double #FFF;
+background: url(../img/logo-back.png) repeat-x bottom;
+position: relative;
+}
+#sidebar h1 img {
+vertical-align: middle;
+}
+#sidebar h1 a,
+#sidebar h1 a:hover {
+color: #FFF;
+text-decoration: none;
+}
+#sidebar small {
+font-size: 10px;
+line-height: 1.2;
+display: block;
+margin: 20px 10px;
+}
+
+/* サイドバー #sidebar:メニュー
+-----------------------------------------*/
+nav {
+width: 180px;
+}
+nav .long {
+/*font-size: 13px;*/
+}
+nav ul {
+}
+nav ul li {
+border-bottom: 1px solid #233e47;
+position: relative;
+}
+nav ul li a,
+nav ul li span {
+display: table-cell;
+vertical-align: middle;
+width: 180px;
+height: 60px;
+padding: 0 .5em;
+color: #FFF;
+text-decoration: none;
+}
+nav > ul > li > a:before,
+nav > ul > li > span:before {
+content: url(../img/nav_icon.png);
+margin-right: 3px;
+vertical-align: -2px;
+}
+nav ul li a:hover,
+nav ul li.here > a,
+nav ul li.here > span {
+background: #90b153;
+color: #FFF;
+}
+
+
+/*ヘッダー:メニュー 子メニュー
+-----------------------------------------*/
+nav > ul > li ul {
+/*display: none;*/
+padding: 0;
+text-align: right;
+}
+/*nav > ul > li.here ul,
+nav > ul > li:hover ul {
+display: block;
+}*/
+nav ul ul li {
+border-top: 1px solid #233e47;
+border-bottom: none;
+}
+nav > ul > li ul a {
+height: 30px;
+padding: 0 1em;
+}
+
+
+/*フッター
+-----------------------------------------*/
+footer {
+clear: both;
+width: 1000px;
+margin: 0 auto;
+padding: 25px 25px 75px 25px;
+background: #c7b299;
+color: #247486;
+font-family: Arial,sans-serif;
+}
+footer small {
+display: block;
+font-size: 16px;
+text-align: right;
+}
+
+/*ページの上に戻る
+-----------------------------------------*/
+#goto-pagetop {
+position: fixed;
+bottom: 30px;
+margin-right: -539px;
+right: 50%;
+}
+#goto-pagetop a {
+display: block;
+text-indent: -999em;
+overflow: hidden;
+width: 39px;
+height: 105px;
+text-decoration: none;
+position: relative;
+}
+#goto-pagetop a:before {
+content: url(../img/pagetop.png);
+display: block;
+position: absolute;
+text-indent: 0;
+width: 39px;
+height: 105px;
+top:0;
+left: 0;
+}
+/*noscript
+-----------------------------------------*/
+p#noscript {
+width: 80%;
+padding: 30px;
+margin: 0 auto;
+color: red;
+font-weight: bold;
+}
+
+/*ベースレイアウト系
+-----------------------------------------
+-----------------------------------------*/
+main {
+padding: 0 0 0 0;
+position: relative;
+}
+main > h1{
+margin: 0 0 10px 0;
+padding: 15px 30px;
+background: #000;
+color: #FFF;
+text-align: right;
+font-size: 20px;
+font-weight: normal;
+}
+main > h1:before {
+content: url(../img/midashi01.png);
+margin-right: 5px;
+}
+body section {
+padding: 30px 35px 0 35px;
+position: relative;
+background: #FFF;
+min-height: 500px;
+}
+article {
+padding: 35px 0 0;
+}
+article:first-child {
+padding: 0;
+}
+section:after,
+article:after {
+content: "";
+display: block;
+clear: both;
+}
+main:after {
+content: "";
+display: block;
+width: 100%;
+height: 100px;
+background: #FFF;
+clear: both;
+}
+.clear {
+clear: both;
+}
+
+/*大見出し
+-----------------------------------------*/
+section > h1 {
+border-bottom: 1px solid #000;
+padding: 0 0 3px 0;
+margin: 0 0 20px;
+font-size: 26px;
+font-weight: normal;
+}
+section > h1:after {
+content: "";
+display: block;
+height: 0;
+border-bottom: 3px solid #000;
+}
+
+/*中見出し
+-----------------------------------------*/
+section header {
+background: url(../img/midashi02.png);
+margin: 0 0 20px;
+padding: 5px 5px 5px 20px;
+width: 100%;
+font-weight: normal;
+position: relative;
+}
+section header h2 {
+background: #FFF;
+padding: 10px 100px 10px 10px;
+font-size: 20px;
+font-weight: normal;
+color: #247486;
+word-break: break-all;
+}
+section header time {
+font-size: 12px;
+color: #999;
+position: absolute;
+bottom: 15px;
+right: 15px;
+}
+
+/*小見出し
+-----------------------------------------*/
+section h3 {
+border: 0 solid #247486;
+border-top-width: 1px;
+border-bottom-width: 5px;
+margin: 0 0 20px;
+padding: 10px 10px 10px 25px;
+width: 100%;
+font-weight: normal;
+position: relative;
+}
+section h3:before {
+content: url(../img/midashi03.png);
+display: block;
+position: absolute;
+top: 12px;
+left: 0;
+}
+
+/*大見出し:画像タイプ
+-----------------------------------------*/
+main header.img {
+margin: 0;
+padding: 0;
+position: relative;
+}
+main header.img img {
+margin: 0;
+}
+main header.img h1 {
+border-bottom: none;
+background: rgba(0, 0, 0, .6);
+padding: 15px 35px;
+margin: 0;
+width: 800px;
+font-size: 20px;
+color: #FFF;
+font-weight: normal;
+text-align: right;
+position: absolute;
+bottom: 0;
+}
+.ie8 main header.img h1 {
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#99000000', endColorstr='#99000000',GradientType=0 );
+}
+main header.img h1:before {
+content: url(../img/midashi01.png);
+margin-right: 5px;
+}
+
+/*平文
+-----------------------------------------*/
+p {
+margin-bottom: 1em;
+line-height: 160%;
+}
+section p {
+clear: both;
+}
+section > div,
+.theme-tmp + div {
+display: block;
+clear:both;
+margin: 20px 35px 2em;
+}
+section > div {
+margin: 0 0 3.5em;
+}
+
+/*画像
+-----------------------------------------*/
+main img {
+vertical-align: bottom;
+}
+main #slider img {
+margin: 0;
+}
+
+/* 文章＋画像設定
+-----------------------------------------*/
+article div {
+float: left;
+}
+article div.img-wrapper {
+margin: 0 20px 20px 0;
+padding: 5px;
+border: 1px solid #247486;
+}
+
+/*逆レイアウト*/
+article.reverse div {
+float: right;
+}
+article.reverse div.img-wrapper {
+margin: 0 0 20px 20px;
+}
+
+/*ページ送り
+-----------------------------------------*/
+main > ol {
+background: #FFF;
+padding: 90px 0 0 0;
+text-align: center;
+}
+main > ol li {
+display: inline-block;
+border: 1px solid #B3B3B3;
+background: #000;
+color: #DDDDDD;
+padding: 5px 8px;
+font-size: 16px;
+}
+main > ol li a {
+display: block;
+background: #FFF;
+color: #B3B3B3;
+padding: 5px 8px;
+margin: -5px -8px;
+text-decoration: none;
+}
+main > ol li a:hover {
+background: #000;
+color: #DDDDDD;
+}
+
+/*普通のリスト
+-----------------------------------------*/
+main ul {
+margin: 0 0 0 1em;
+}
+main ul li {
+margin: 0 0 6px 0;
+}
+main ul li:before {
+content: "・";
+margin-left: -1em;
+}
+
+/* テーブル（記事）
+-----------------------------------------*/
+div > table {
+border-spacing: 2px;
+border-collapse: separate;
+margin: 1em 0 0 0;
+font-size: 12px;
+width: 100%;
+}
+div > table caption {
+text-align:left;
+font-weight: normal;
+background: #247486;
+color: #FFF;
+padding: 5px;
+margin: 0 2px;
+}
+div > table td, div > table th {
+border: 1px #CCC solid;
+padding: 10px 5px;
+}
+div > table th {
+text-align:left;
+white-space: nowrap;
+width: 5em;
+font-weight:normal;
+background-color: #E6E6E6;
+}
+table + p,
+table + ul {
+margin-top: 1em;
+}
+
+/* テーブル(大)
+-----------------------------------------*/
+section > table {
+border-spacing: 1px;
+border-collapse: separate;
+margin: 1em 0 0 0;
+width: 100%;
+}
+section > table td, section > table th {
+border: 1px #B3B3B3 dotted;
+border-left: none;
+padding: 10px 5px;
+color: #231815;
+}
+section > table th {
+border-left: 5px #247486 solid;
+text-align:left;
+white-space: nowrap;
+width: 20%;
+font-weight:normal;
+background-color: #E6E6E6;
+color: #247486;
+}
+
+
+/* topページ専用
+-----------------------------------------*/
+body.top #mainContent {
+padding-bottom: 50px;
+}
+body.top main:after {
+display: none;
+}
+body.top .theme-tmp {
+margin: 10px 0;
+}
+body.top:before {
+content: "";
+display: block;
+position: absolute;
+width: 100%;
+height: 500px;
+top: 20px;
+left: 0;
+right: 0;
+background: url(../img/top-back.png) center repeat-y;
+z-index: 1;
+}
+body.top #wrapper {
+z-index: 1000;
+position: relative;
+}
+body.top footer {
+width: 100%;
+}
+body.top footer small {
+width: 1000px;
+margin: 0 auto;
+}
+body.top main aside {
+margin: 20px 0;
+}
+body.top main aside dl {
+border: 1px dashed #39525B;
+margin-bottom: 15px;
+padding: 10px 0;
+display: table;
+table-layout: fixed;
+}
+body.top main aside dl dt,
+body.top main aside dl dd {
+padding: 0 10px;
+display: table-cell;
+vertical-align: middle;
+}
+body.top main aside dl dt {
+text-align: center;
+}
+body.top main aside dl dd {
+border-left: 1px solid #39525B;
+color: #FFF;
+}
+body.top main aside dl.one {
+width: 100%;
+}
+body.top main aside dl.two {
+width: 49%;
+float: left;
+clear: both;
+}
+body.top main aside dl.two.end-line {
+margin-left: 2%;
+clear: none;
+}
+body.top main aside dl.two dt {
+width: 20%;
+}
+

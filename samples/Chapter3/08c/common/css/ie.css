@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+/*基本設定
+-----------------------------------------*/
+@import url("base.css");
+@import url("tablet.css");
+@import url("pc.css");
+
+/*追記
+-----------------------------------------*/
+html {
+	min-width: 1050px; 
+}
+
+
+

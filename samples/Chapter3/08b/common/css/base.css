@@ -1,0 +1,388 @@
+@charset "UTF-8";
+
+/*基本設定
+-----------------------------------------*/
+* {
+margin: 0;
+padding: 0;
+font-weight: normal;
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+}
+li {
+list-style: none;
+}
+a img {
+border: none;
+}
+img {
+width:100%;
+vertical-align: middle;
+}
+html {
+}
+body {
+padding: 0;
+margin: 0;
+position: relative;
+font-size: 14px;
+color: #FFF;
+background: #000;
+line-height: 1.2;
+font-family: "Hiragino Kaku Gothic Pro","メイリオ","ＭＳ Ｐゴシック",sans-serif;
+-webkit-text-size-adjust: 100%;
+}
+a {
+color: #C69C6D;
+}
+a:hover {
+color: #FFB25C;
+}
+hr {
+border: none;
+height: 0;
+overflow: hidden;
+border-bottom: 1px dotted #959595;
+clear: both;
+}
+header, footer, section, article, figure ,figcaption {
+display: block;
+}
+header#top:after,
+header#top + div:after,
+article:after,
+ul:after {
+content: "";
+display: block;
+clear: both;
+height: 0;
+width: 0;
+}
+
+/*パララックス背景 #bg3が手前、#bg1が奥
+-----------------------------------------*/
+#bg1 {
+background-image: url(../img/bg1.png); 
+}
+#bg2 {
+background-image: url(../img/bg2.png); 
+}
+#bg3 {
+background-image: url(../img/bg3.png); 
+}
+
+/*ヘッダー
+-----------------------------------------*/
+header#top {
+position: relative;
+overflow: hidden;
+}
+header#top #logo-wrapper {
+background: #490026 url(../img/back-top.png) repeat top;
+}
+header#top h1 {
+font-size: 42px;
+line-height: 1;
+text-align: left;
+padding: 15px 80px 15px 3%;
+font-family: 'Alex Brush','Hiragino Mincho Pro','ＭＳ Ｐ明朝',cursive;
+color: #FFF;
+}
+header#top #logo-wrapper h1 img {
+width: auto;
+margin: 0;
+}
+header#top .banner {
+display: none;
+}
+header#top img {/*メインイメージ*/
+margin: 0 -30%;
+width: 160%;
+}
+nav {
+color: #000;
+position: fixed;
+z-index: 9999;
+top: 0;
+left: 0;
+width: 100%;
+}
+nav h2 {/*jQueryで自動挿入されるボタン*/
+background: #490026 url(../img/icon-menu.png) no-repeat center center;
+position: absolute;
+z-index: 9999;
+top: 5px;
+right: 5px;
+border: 1px solid #FFF;
+width: 57px;
+height: 40px;
+border-radius: 3px;
+}
+nav > ul {
+padding: 50px 0 0 0;
+background: #490026 url(../img/back-top.png) repeat top;
+}
+nav > ul li {
+color: #000;
+position: relative;
+}
+nav > ul > li a,
+nav > ul > li span,
+nav li a:hover {
+display: block;
+padding: 10px;
+text-decoration: none;
+color: #42210B;
+border-top: 1px solid #FFF;
+border-bottom: 1px solid #959595;
+background: #DCDDDD url(../img/back-menu.png) center center repeat-x;
+}
+nav li a:hover {
+opacity: .9;
+}
+nav a:hover,
+nav span:hover {
+background: rgba(0, 0, 0, .1);
+}
+nav li ul {
+}
+nav li ul li a {
+font-size: 12px;
+}
+nav li ul li a:before {
+content: "■ ";
+}
+nav button {
+background: #630028;
+color: #FFF;
+font-size: 11px;
+border: 1px solid #490026;
+width: 57px;
+height: 40px;
+border-radius: 3px;
+position: absolute;
+top: 5px;
+display: none;
+}
+body.touchDevice nav button {
+display: block;
+}
+nav button#swPC {
+left: 70px;
+}
+nav button#swSP {
+left: 10px;
+}
+
+/*フッター
+-----------------------------------------*/
+footer {
+clear: both;
+text-align: center;
+margin-top: 3em;
+}
+footer a[href="#top"] {
+}
+footer small {
+display: block;
+font-size: 12px;
+line-height: 30px;
+background: #30001C;
+width: 100%;
+height: 30px;
+color: #FFF;
+font-family: sans-serif;
+margin-top: 1.5em;
+}
+
+
+/*noscript
+-----------------------------------------*/
+p#noscript {
+width: 80%;
+padding: 30px;
+margin: 0 auto;
+color: red;
+font-weight: bold;
+}
+
+/*ベースレイアウト系
+-----------------------------------------
+-----------------------------------------*/
+section > div {
+padding: 30px 0 10px;
+}
+article {
+padding-top:20px;
+border-bottom: 1px dashed #4D4D4D;
+}
+section h1,
+section header,
+section p,
+section table,
+section [class*="map"] {
+margin: 0 3% 10px;
+}
+section h1,
+section header {
+margin-bottom: 0;
+}
+
+/*大見出し
+-----------------------------------------*/
+section h1 {
+font-size: 20px;
+text-align: center;
+background: url(../img/back-midashi.png) center center;
+color: #FFF;
+border: 1px solid #666;
+border-left: none;
+border-right: none;
+padding: 12px 0;
+line-height: 1.2;
+}
+
+
+/*中見出し
+-----------------------------------------*/
+section header {
+padding-left: 18px;
+position: relative; 
+}
+section header:before {
+content: url(../img/icon01.png);
+position: absolute;
+top: 1px;
+left: 4px;
+}
+section h2 {
+font-size: 16px;
+}
+section time {
+display: block;
+font-size: 12px;
+text-align: right;
+content: #B3B3B3;
+}
+section.textImg header:before {
+content: url(../img/icon02.png);
+position: absolute;
+top: 4px;
+left: 2px;
+}
+section.textImg h2 {
+font-size: 18px;
+}
+section.textImg header {
+margin-bottom: 10px;
+}
+
+/*画像
+-----------------------------------------*/
+article img {
+width: 100%;
+margin-bottom: 10px; 
+}
+article p + strong {
+display: block;
+font-weight: bold;
+text-align: right;
+}
+
+/*平文
+-----------------------------------------*/
+p {
+line-height: 160%;
+}
+section > p {
+display: block;
+clear:both;
+}
+
+
+/*普通のリスト
+-----------------------------------------*/
+main ul {
+margin: 6px 3%;
+}
+main ul li {
+margin: 0 0 6px 1em;
+}
+main ul li:before {
+content: "・";
+margin-left: -1em;
+}
+
+/* テーブル
+-----------------------------------------*/
+table {
+border: 1px #333 solid;
+border-spacing: 0;
+border-collapse: collapse;
+margin: 0 0 10px 0;
+}
+table caption {
+text-align:left;
+}
+td, th {
+border: 1px #333 solid;
+padding: 20px 5px 10px;
+}
+th {
+text-align:left;
+white-space: nowrap;
+width: 1%;
+font-weight:normal;
+}
+
+
+/* Googleマップ
+-----------------------------------------*/
+.google-map {
+position: relative;
+padding-bottom: 65%; /*縦横比*/
+height: 0;
+overflow: hidden;
+}
+.google-map iframe {
+position: absolute;
+top: 20px;
+left: 0;
+width: 100% !important;
+height: 100% !important;
+}
+
+
+/* バナー置き場
+-----------------------------------------*/
+section.banner,
+section.banner-img {
+background: url(../img/back-button02.png);
+margin: 2em 0;
+}
+.banner div,
+.banner-img div {
+font-size: 20px;
+padding: 1.5em 0;
+}
+.banner a {
+width: 80%;
+display: block;
+text-align: center;
+font-size: 20px;
+margin: 3% auto;
+padding: 1em 0;
+color: #42210B;
+text-decoration: none;
+background: #EFD16C url(../img/back-button01.png) center center repeat-x;
+border: 1px solid #D89600;
+}
+.banner a:hover {
+opacity: .85;
+}
+.banner-img img {
+width: 80%;
+margin: 0 0 5%;
+}
+

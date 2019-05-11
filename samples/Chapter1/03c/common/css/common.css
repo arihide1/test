@@ -1,0 +1,558 @@
+@charset "UTF-8";
+
+/*基本設定
+-----------------------------------------*/
+* {
+margin: 0;
+padding: 0;
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+background: url(../img/trancepercent.png);
+}
+li {
+list-style: none;
+}
+a img {
+border: none;
+}
+html {
+}
+body {
+padding: 0;
+margin: 0;
+position: relative;
+font-size: 14px;
+color: #000;
+line-height: 1.2;
+font-family: "Hiragino Kaku Gothic Pro","メイリオ","ＭＳ Ｐゴシック",sans-serif;
+background: #FFF url(../img/back01.png) repeat-x 0 120px;
+}
+a {
+color: #0071bc;
+}
+a:hover {
+color: #0098ff;
+}
+hr {
+border: none;
+height: 0;
+overflow: hidden;
+border-bottom: 1px dotted #959595;
+clear: both;
+}
+main, header, footer, section, article, figure ,figcaption {
+display: block;
+}
+body > header + div {
+width: 1050px;
+margin: 0 auto;
+padding: 30px 124px;
+background: #FFF;
+}
+body > header:after,
+body > header + div:after {
+content: "";
+display: block;
+clear: both;
+height: 0;
+width: 0;
+}
+
+/*ヘッダー
+-----------------------------------------*/
+body > header {
+background: #000;
+}
+#site-info {
+position: relative;
+}
+#site-info > div {
+display: table;
+width: 900px;
+margin: 0 auto;
+}
+#site-info h1 {
+font-size: 50px;
+font-weight: normal;
+padding: 5px 2% 5px 0;
+display: table-cell;
+vertical-align: middle;
+color: #40ceff;
+}
+#site-info h1 a,
+#site-info h1 a:hover {
+color: #40ceff;
+text-decoration: none;
+}
+#site-info h1 + div {
+font-size: 12px;
+color: #999;
+font-weight: normal;
+width: 1%;
+padding: 0 2% 0 0;
+display: table-cell;
+white-space: nowrap;
+vertical-align: middle;
+}
+#site-info h1 + div p {
+margin: 0;
+line-height: 1;
+display: inline;
+}
+#site-info h1 + div p.address {
+}
+#site-info h1 + div p.tel {
+font-size: 24px;
+}
+/*ヘッダー:メニュー
+-----------------------------------------*/
+#navigation {
+width: 100%;
+position: relative;
+}
+nav {
+width: 800px;
+margin: 0 auto;
+}
+nav:after,
+nav > ul:after {
+content: "";
+display: block;
+clear: both;
+}
+nav > ul {
+border-left: 1px solid #FFF;
+float: right;
+margin-bottom: 5px; 
+}
+nav > ul > li {
+float: left;
+border-right: 1px solid #FFF;
+position: relative;
+}
+nav > ul > li > a {
+display: block;
+width: 100%;
+padding: 10px 20px;
+color: #FFF;
+text-decoration: none;
+text-align: center;
+line-height: 1;
+position: relative;
+font-weight: bold;
+font-size: 16px;
+}
+nav > ul > li > a:hover,
+nav > ul > li.here > a {
+color: #40ceff;
+}
+
+/*ヘッダー:メニュー 子メニュー
+-----------------------------------------*/
+nav > ul > li ul {
+display: none;
+position: absolute;
+left: 0;
+width: 200px;
+padding: 0;
+z-index: 9999;
+text-align: left;
+}
+nav > ul > li:hover ul {
+display: block;
+}
+nav > ul > li ul a {
+display: block;
+padding: 10px;
+color: #FFF;
+background: rgba(119, 173, 216, .8);
+text-decoration: none;
+border: 1px solid #FFF;
+border-top: none;
+}
+.ie8 nav > ul > li ul a {
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#BF77add8', endColorstr='#BF77add8',GradientType=0 );
+}
+nav > ul > li ul li:first-child a {
+border: 1px solid #FFF;
+}
+nav > ul > li ul a:hover {
+color: #FFF;
+background: rgba(22, 106, 153, .8);
+}
+.ie8 nav > ul > li ul a:hover {
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#BF166a99', endColorstr='#BF166a99',GradientType=0 );
+}
+
+/*フッター
+-----------------------------------------*/
+footer {
+clear: both;
+background: #000;
+padding: 25px 0;
+}
+footer > div {
+display: table;
+width: 1000px;
+margin: 0 auto 25px;
+}
+footer > div div {/*3カラムベース＋1カラム目*/
+display: table-cell;
+vertical-align: top;
+width: 33%;
+padding: 15px 20px;
+}
+footer > div div + div {/*2カラム目+3カラム目*/
+}
+footer > div div + div + div {/*3カラム目*/
+border-right: none;
+}
+
+footer > div div ul li {/*1カラム目:リスト（バナー置き場）*/
+display: table;
+margin: 0 0 35px;
+}
+footer > div div ul li a {/*1カラム目:リスト（バナー置き場）*/
+display: table-cell;
+vertical-align: top;
+padding-right: 15px;
+}
+footer > div div ul li p {/*1カラム目:リスト（バナー置き場）*/
+display: table-cell;
+vertical-align: middle;
+font-size: 12px;
+color: #999;
+}
+
+footer > div div + div ul li {/*2カラム目:リスト（メニュー）*/
+display: block;
+margin: 0 0 8px;
+}
+footer > div div + div ul li ul {/*2カラム目:リスト（メニュー）*/
+margin: 8px 0 0 1em;
+}
+footer > div div + div ul li a {/*2カラム目:リスト（メニュー）*/
+display: inline;
+color: #999;
+text-decoration: none;
+}
+footer > div div + div ul li a:before {/*2カラム目:リスト（メニュー）*/
+content: "■";
+margin: 0 5px 0 0;
+}
+footer > div div + div ul li a:hover {/*2カラム目:リスト（メニュー）*/
+color: #FFF;
+}
+footer > div div + div ul ul li a:before {/*2カラム目:リスト（メニュー）*/
+content:"→";
+margin: 0 5px 0 0;
+}
+
+footer small {
+display: block;
+font-size: 14px;
+text-align: center;
+line-height: 60px;
+background: #66b3de;
+width: 100%;
+height: 60px;
+font-family: Arial,sans-serif;
+}
+
+/*ページの上に戻る
+-----------------------------------------*/
+#goto-pagetop {
+position: fixed;
+bottom: 30px;
+right: 55px;
+background: url(../img/trancepercent.png);/*IE9, 10 対策*/
+}
+#goto-pagetop a {
+display: block;
+text-indent: -999em;
+overflow: hidden;
+width: 76px;
+height: 76px;
+text-decoration: none;
+position: relative;
+}
+#goto-pagetop a:before {
+content: url(../img/pagetop.png);
+display: block;
+position: absolute;
+text-indent: 0;
+width: 76px;
+height: 76px;
+top:0;
+left: 0;
+}
+/*noscript
+-----------------------------------------*/
+p#noscript {
+width: 80%;
+padding: 30px;
+margin: 0 auto;
+color: red;
+font-weight: bold;
+}
+
+/*ベースレイアウト系
+-----------------------------------------
+-----------------------------------------*/
+main {
+padding: 0 0 30px 0;
+}
+body section {
+padding: 30px 0;
+margin: 0;
+position: relative;
+}
+section.imgList {
+padding: 30px 0 0;
+}
+body section + section {
+}
+article {
+margin: 0 0 25px;
+padding-bottom: 10px;
+position: relative;
+}
+section.imgList article,
+section.access article {
+border-bottom: none;
+}
+article:last-child {
+margin: 0;
+}
+main:after,
+section:after,
+article:after {
+content: "";/*IE対策のため全角スペース*/
+display: block;
+clear: both;
+}
+.clear {
+clear: both;
+}
+
+/*大見出し
+-----------------------------------------*/
+main > h1 {
+font-size: 36px;
+font-weight: normal;
+color: #231815;
+}
+main > h1 span.mini {
+font-size: 20px;
+}
+/*中見出し
+-----------------------------------------*/
+section header {
+margin: 0 0 20px;
+padding: 5px 5px 5px 0;
+width: 100%;
+font-weight: normal;
+position: relative;
+border-bottom: 1px solid #000;
+}
+section header h2 {
+margin: 0 150px 0 0;
+font-size: 20px;
+font-weight: normal;
+}
+section header time {
+font-size: 12px;
+position: absolute;
+bottom: 5px;
+right: 3px;
+}
+
+
+/*平文
+-----------------------------------------*/
+p {
+margin-bottom: 1em;
+line-height: 160%;
+}
+section p {
+clear: both;
+}
+section > div,
+.theme-tmp + div {
+display: block;
+clear:both;
+margin: 20px 35px 2em;
+}
+section > div {
+margin: 0 0 3.5em;
+}
+
+/*画像
+-----------------------------------------*/
+main img {
+margin: 0 35px 20px;
+vertical-align: bottom;
+}
+main #slider img {
+margin: 0;
+}
+main #slider img,
+main header img {
+border: none;
+}
+/* 画像配置（キャプション入り）
+-----------------------------------------*/
+figure {
+font-size: 12px;
+}
+figure img,
+.imgList article img {
+margin: 0 0 5px;
+}
+
+/* 文章＋画像設定
+-----------------------------------------*/
+section > figure,
+section  > figure + figure,/*画像一覧*/
+article figure,/*画像配置（キャプションあり）*/
+article div > img,/* 画像配置（キャプションなし）*/
+article > img,/*画像が見出しと同列になるタイプ（キャプションなし）*/
+.imgList article /* imgList*/{
+float: left;
+margin: 0 35px 20px 0;
+}
+article figure + div,/*画像配置（キャプションあり）*/
+article div > img + div/* 画像配置（キャプションなし）*/{
+float: left;
+}
+article > header + div:after {
+content: "";
+display: block;
+clear: both;
+}
+figure.endOfLine,
+.imgList article.endOfLine/*画像一覧:行末*/ {
+margin-right: 0;
+}
+
+.imgList article h1 {
+font-size: 14px;
+font-weight: normal;
+margin: 0 0 3px;
+}
+.imgList article p {
+line-height: 140%;
+margin: 0 0 3px;
+}
+.imgList article p.price {
+font-size: 16px;
+display: block;
+margin: 0;
+text-align: right;
+}
+
+/*逆レイアウト*/
+article.reverse figure,/*画像配置（キャプションあり）*/
+article.reverse div > img,/*画像配置（キャプションなし）*/
+article.reverse > img/*画像が見出しと同列になるタイプ（キャプションなし）*/ {
+float: right;
+margin: 0 0 20px 35px;
+}
+
+/* 画像が見出しと同列になるタイプ
+-----------------------------------------*/
+section article > figure + div,/*キャプションあり*/
+section article > img + div/*キャプションなし*/ {
+float: left;
+}
+section div header h2 {
+margin: 0;
+}
+/*逆レイアウト*/
+section article.reverse > figure + div,/*キャプションあり*/
+section article.reverse > img + div/*キャプションなし*/ {
+float: right;
+}
+
+/*普通のリスト
+-----------------------------------------*/
+main ul {
+margin: 0 0 0 1em;
+}
+main ul li {
+margin: 0 0 6px 0;
+}
+main ul li:before {
+content: "・";
+margin-left: -1em;
+}
+
+/* テーブル
+-----------------------------------------*/
+table {
+border: 1px #999 solid;
+border-spacing: 0;
+border-collapse: collapse;
+margin: 0 0 10px 0;
+}
+table caption {
+text-align:left;
+font-weight: bold;
+}
+td, th {
+border: 1px #999 solid;
+padding: 10px 5px;
+}
+th {
+text-align:left;
+white-space: nowrap;
+width: 1%;
+font-weight:normal;
+background-color: #DDD;
+}
+th + th {
+background-color: #f2f2f2;
+}
+.cel1 td {
+text-align: center;
+}
+
+/* アクセス用
+-----------------------------------------*/
+article.access div.mapData {
+float: left;
+width: 480px;
+margin: 0 35px 25px 0;
+}
+article.access div.mapData img {
+float: left;
+margin: 0;
+}
+article.access div.mapData img[width="230"] {
+margin: 20px 20px 0 0;
+}
+article.access div.mapData img[width="230"] + img {
+margin: 20px 0 0 0;
+}
+article.access table {
+float: left;
+width: 280px;
+margin: 0 0 25px;
+border: none;
+}
+article.access td,
+article.access th {
+color: #231815;
+border: none;
+border-bottom: 1px #999 solid;
+padding: 15px 5px;
+}
+article.access th {
+font-weight: bold;
+background-color: #FFF;
+}
+article.access th + th {
+background-color: #FFF;
+}
+

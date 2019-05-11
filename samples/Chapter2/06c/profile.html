@@ -1,0 +1,222 @@
+<!DOCTYPE HTML>
+<!--[if lt IE 9 ]> <html lang="ja" class="ie8"> <![endif]--> 
+<!--[if IE 9 ]> <html lang="ja" class="ie9"> <![endif]--> 
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="ja"> <!--<![endif]-->
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<!-- ↓ページタイトル↓ -->
+<title>プロフィール｜Home Cooking</title>
+
+<!-- ↓検索エンジン用ここから↓ -->
+<meta name="Description" content="検索用文言">
+<meta name="Keywords" content="検索用キーワードカンマ（,）区切り">
+<!-- ↑検索エンジン用ここまで↑-->
+
+<!-- ▼▼ここからは変更不可！！▼▼ -->
+<link rel="stylesheet" href="common/js/colorbox/colorbox.css">
+<link rel="stylesheet" href="common/css/common.css">
+
+<script src="common/js/jquery.min.js"></script>
+<script src="common/js/colorbox/jquery.colorbox-min.js"></script>
+<script src="common/js/jquery.tile.min.js"></script>
+<script src="common/js/common.js"></script>
+
+<script>
+jQuery(function() {
+$('a[href$=".jpg"],a[href$=".gif"],a[href$=".png"],a[href$=".jpeg"]').colorbox();
+
+$(window).load(function() {
+ $("#wrapper > div").tile();
+ $(".img-list figure, .img-list div.img-wrapper").tile();
+});
+
+});
+</script>
+<!--[if lt IE 9]>
+<script src="common/js/html5shiv.min.js"></script>
+<![endif]-->
+</head>
+
+<body id="top">
+<noscript>
+<p id="noscript">このWebサイトはJavaScriptを使用しています。
+<!--[if lt IE 9]><br>
+Internet Explorer 8をお使いの方はJavaScriptをオンにしてご覧ください。
+<![endif]-->
+</p>
+</noscript>
+<!-- ▲▲ここまでは変更不可！！▲▲ -->
+
+<div id="wrapper">
+
+<!-- ↓左サイドバーカラムここから↓ -->
+<div id="sidebar">
+<header>
+<!-- ↓サイトロゴ画像↓ -->
+<h1><a href="index.html"><img src="img/logo.png" width="185" height="185" alt="Home Cooking"></a></h1>
+</header>
+
+<!-- ↓ナビゲーションここから↓ -->
+<nav>
+<ul>
+  <li><a href="index.html">トップページ</a></li>
+  <li><span>レシピ紹介</span>
+    <!-- ↓↓サブメニューここから↓↓ -->
+    <ul>
+      <li><a href="recipe.html">ベリータルト</a></li>
+    </ul>
+    <!-- ↑↑サブメニューここまで↑↑ -->
+  </li>
+  <li><span>お菓子のミニ知識</span>
+    <!-- ↓↓サブメニューここから↓↓ -->
+    <ul>
+      <li><a href="tips.html">マカロン</a></li>
+    </ul>
+    <!-- ↑↑サブメニューここまで↑↑ -->
+  </li>
+  <li class="here"><a href="profile.html">プロフィール</a></li>
+</ul>
+</nav>
+<!-- ↑ナビゲーションここまで↑ --> 
+</div>
+<!-- ↑左サイドバーカラムここまで↑ -->
+
+<!-- ↓コンテンツカラムここから↓ -->
+<div id="mainContent">
+<main>
+<!-- ↓ページの見出し↓ -->
+<h2>プロフィール</h2>
+
+<section>
+<!-- ↓コーナー見出し1↓ -->
+<h3>管理人のこと★</h3>
+
+<!-- ↓プロフィール（表1）ここから↓ -->
+<table class="style2">
+  <tr>
+    <th>名前</th>
+    <td>ペロ</td>
+  </tr>
+  <tr>
+    <th>性別</th>
+    <td>女子</td>
+  </tr>
+  <tr>
+    <th>誕生日</th>
+    <td>2月12日</td>
+  </tr>
+  <tr>
+    <th>年齢</th>
+    <td>20代</td>
+  </tr>
+  <tr>
+    <th>血液型</th>
+    <td>O型</td>
+  </tr>
+  <tr>
+    <th>星座</th>
+    <td>水瓶座</td>
+  </tr>
+  <tr>
+    <th>趣味</th>
+    <td>ゲーム（料理はライフワーク）</td>
+  </tr>
+</table>
+<!-- ↑プロフィール（表1）ここまで↑ -->
+
+<div class="img-wrapper">
+<!-- ↓画像↓ -->
+<img src="img/profile01.jpg" width="280" height="185" alt="ペロ（代理）">
+</div>
+</section>
+
+<section>
+<!-- ↓コーナー見出し2↓ -->
+<h4>各コーナーの紹介☆</h4>
+
+<!-- ↓ページ一覧（表2）ここから↓ -->
+<table class="style3">
+  <tr>
+    <th><a href="index.html">トップページ</a></th>
+    <td>サイトの玄関です〜。リンクはこのページにヨロシクね♪</td>
+  </tr>
+  <tr>
+    <th><a href="recipe.html">レシピ紹介</a></th>
+    <td>お料理解説するよ♥メインコーナーになるように充実させていきたいな(*´∪｀)ﾉ</td>
+  </tr>
+  <tr>
+    <th><a href="tips.html">お菓子のミニ知識</a></th>
+    <td>お菓子のミニ知識だけど、作っているときのグチになってきた…（笑）</td>
+  </tr>
+  <tr>
+    <th>プロフィール</th>
+    <td>このページだよ♪</td>
+  </tr>
+</table>
+<!-- ↑ページ一覧（表2）ここまで↑ -->
+</section>
+
+</main>
+
+<footer>
+<!-- ↓リンクバナーここから↓ -->
+<aside>
+  <!-- ↓↓リンクバナー1↓↓ -->
+  <dl>
+    <dt>
+    <a href="#" target="_blank">
+    <img src="common/img/twitter.png" width="40" height="40" alt="Twitter">
+    </a>
+    </dt>
+    <dd>Twitterやってます。<br>
+    ぜひフォローしてくださいね♪</dd>
+  </dl>
+  <!-- ↓↓リンクバナー2↓↓ -->
+  <dl>
+    <dt>
+    <a href="#" target="_blank">
+    <img src="common/img/facebook.png" width="40" height="40" alt="Facebook">
+    </a>
+    </dt>
+    <dd>Facebookやってます。<br>
+    ぜひフォローしてくださいね♪</dd>
+  </dl>
+</aside>
+<!-- ↑リンクバナーここまで↑ -->
+
+<!-- ↓ナビゲーション（フッター）ここから↓ -->
+<ul>
+  <li><a href="index.html">トップページ</a></li>
+  <li><span>レシピ紹介</span>
+    <!-- ↓↓サブメニューここから↓↓ -->
+    <ul>
+      <li><a href="recipe.html">ベリータルト</a></li>
+    </ul>
+    <!-- ↑↑サブメニューここまで↑↑ -->
+  </li>
+  <li><span>お菓子のミニ知識</span>
+    <!-- ↓↓サブメニューここから↓↓ -->
+    <ul>
+      <li><a href="tips.html">マカロン</a></li>
+    </ul>
+    <!-- ↑↑サブメニューここまで↑↑ -->
+  </li>
+  <li><a href="profile.html">プロフィール</a></li>
+</ul>
+<!-- ↑ナビゲーション（フッター）ここまで↑ -->
+
+<!-- ↓コピーライト↓ --> 
+<small>© Home Cooking</small>
+</footer>
+
+</div>
+<!-- ↑コンテンツカラムここまで↑ -->
+
+<!-- ↓ページの上に戻るボタン↓ -->
+<p id="goto-pagetop"><a href="#top">このページの上に戻る</a></p>
+
+</div>
+</body>
+</html>

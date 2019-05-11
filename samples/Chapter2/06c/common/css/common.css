@@ -1,0 +1,564 @@
+@charset "UTF-8";
+
+/*基本設定
+-----------------------------------------*/
+* {
+margin: 0;
+padding: 0;
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+background: url(../img/trancepercent.png);
+}
+li {
+list-style: none;
+}
+a img {
+border: none;
+}
+img {
+vertical-align: bottom;
+}
+html {
+}
+body {
+padding: 0;
+margin: 0;
+position: relative;
+font-size: 14px;
+color: #333;
+line-height: 1.2;
+font-family: "Hiragino Kaku Gothic Pro","メイリオ","ＭＳ Ｐゴシック",sans-serif;
+background: #00A1BC;
+}
+a {
+color: #603813;
+}
+a:hover {
+color: #994900;
+}
+hr {
+margin: 2em 0;
+height: 0;
+overflow: hidden;
+clear: both;
+border: none;
+border-bottom: 3px solid #F15A24;
+}
+main, header, footer, section, article, figure ,figcaption {
+display: block;
+}
+/*noscript
+-----------------------------------------*/
+p#noscript {
+width: 80%;
+padding: 30px;
+margin: 0 auto;
+color: red;
+font-weight: bold;
+}
+
+/*clearfixまとめて
+-----------------------------------------*/
+#wrapper:after,
+section:after,
+article:after,
+main:after {
+content: "";
+display: block;
+clear: both;
+}
+
+/*カラムベース
+-----------------------------------------*/
+#wrapper {
+max-width: 1500px;
+min-width: 600px;
+width: 85%;
+margin: 0 auto;
+padding: 0 0 0 200px;
+}
+#wrapper > div {
+float: left;
+position: relative;
+}
+#sidebar {
+width: 200px;
+margin: 0 0 0 -200px;
+background: #5E3929;
+padding: 15px 0;
+}
+#mainContent {
+width: 100%;
+background: #FDF1CC;
+padding: 15px;
+}
+
+/*フッター:ベース＆コピーライト
+-----------------------------------------*/
+#mainContent > footer {
+clear: both;
+padding-top: 60px;
+font-family: Arial,sans-serif;
+}
+#mainContent > footer small {
+display: block;
+text-align: center;
+font-size: 14px;
+border-top: 1px solid #CD8C52;
+position: relative;
+margin-top: 3em;
+padding: 25px 0 70px;
+}
+
+
+/*フッター：メニュー
+-----------------------------------------*/
+#mainContent > footer ul {
+text-align: center;
+}
+#mainContent > footer ul li,
+#mainContent > footer ul ul {
+display: inline;
+}
+#mainContent > footer ul a,
+#mainContent > footer ul span {
+display: inline-block;
+}
+#mainContent > footer ul li + li:before {
+content: " ｜ ";
+color: #333;
+}
+#mainContent > footer ul span:after {
+content: " > ";
+color: #333;
+}
+#mainContent > footer a {
+color: #0071BC;
+}
+#mainContent > footer a:hover {
+color: #09F;
+}
+
+/*フッター：SNS告知
+-----------------------------------------*/
+#mainContent > footer > aside {
+margin: 0 0 50px;
+padding: 15px 10px;
+border: 1px solid #CD8C52;
+border-left: none;
+border-right: none;
+position: relative;
+}
+#mainContent > footer > aside:before {
+content: "";
+border-left: 1px solid #CD8C52;
+position: absolute;
+top: 10px;
+left: 49%;
+bottom: 10px;
+}
+#mainContent > footer > aside:after {
+content: "";
+display: block;
+clear: both;
+}
+#mainContent > footer > aside dl {
+margin-bottom: 5px;
+display: table;
+table-layout: fixed;
+width: 50%;
+float: left;
+}
+#mainContent > footer > aside dl dt,
+#mainContent > footer > aside dl dd {
+display: table-cell;
+vertical-align: middle;
+padding: 15px;
+}
+#mainContent > footer > aside dl dt {
+width: 70px;
+}
+
+
+/*ページの上に戻る
+-----------------------------------------*/
+#goto-pagetop {
+position: fixed;
+bottom: 76px;
+right: 76px;
+background: url(../img/trancepercent.png);/*IE9, 10 対策*/
+}
+#goto-pagetop a {
+display: block;
+text-indent: -999em;
+overflow: hidden;
+width: 76px;
+height: 76px;
+text-decoration: none;
+position: relative;
+}
+#goto-pagetop a:before {
+content: url(../img/pagetop.png);
+display: block;
+position: absolute;
+text-indent: 0;
+width: 76px;
+height: 76px;
+top:0;
+left: 0;
+}
+
+/*ナビゲーションカラム:ロゴまわり
+-----------------------------------------*/
+#sidebar h1 {
+margin: 0;
+text-align: center;
+}
+/*ナビゲーションカラム:メニュー
+-----------------------------------------*/
+#sidebar nav > ul {
+border-top: 2px dotted #FFF;
+margin-top: 15px;
+}
+#sidebar nav ul a,
+#sidebar nav ul span {
+padding: 15px;
+display: block;
+border-bottom: 2px dotted #FFF;
+color: #FCF7D3;
+font-weight: bold;
+text-decoration: none;
+}
+#sidebar nav ul ul a {
+font-size: 12px;
+font-weight: normal;
+padding-left: 30px; 
+}
+#sidebar nav ul a:hover,
+#sidebar nav ul .here > a,
+#sidebar nav ul .here > span {
+color: #FFF;
+background: #42210B;
+}
+
+/*コンテンツカラム:見出し1index.html使用）
+-----------------------------------------*/
+#mainContent main header {
+width: 100%;
+height: 180px;
+overflow: hidden;
+position: relative;
+background: #00A1BC;
+}
+#mainContent main header img {
+position: absolute;
+top: 0;
+left: 0;
+z-index: 1;
+}
+#mainContent main header h1 {
+position: absolute;
+bottom: 0;
+left: 0;
+right: 0;
+background : rgba(0, 0, 0, .5);
+color: #FFF;
+font-size: 36px;
+padding: 15px 20px;
+z-index: 2;
+}
+.ie8 #mainContent main header h1 {
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4F000000', endColorstr='#4F000000',GradientType=0 );
+}
+#mainContent main header h1 small {
+font-size: 12px;
+font-weight: normal;
+margin: 0 1em;
+}
+
+/*コンテンツカラム:見出し2 & リード文（index.html使用）
+-----------------------------------------*/
+#mainContent main h2,
+#mainContent main p.read-txt {
+background: #F15A24;
+border: 3px solid #F7931E;
+font-size: 26px;
+color: #FFF;
+font-weight: normal;
+margin-bottom: 20px;
+padding: 10px;
+text-align: center;
+position: relative;
+}
+#mainContent main p.read-txt {
+font-size: 14px;
+padding: 20px;
+margin: 15px 0 30px;
+}
+
+/*コンテンツカラム:見出し3
+-----------------------------------------*/
+#mainContent main h3 {
+font-size: 20px;
+color: #603813;
+font-weight: normal;
+margin: 25px 0 15px;
+padding: 0 15px 10px 15px;
+border-bottom: 3px solid #F15A24;
+}
+
+/*コンテンツカラム:見出し3（更新履歴）
+-----------------------------------------*/
+#mainContent main .update h3 {
+margin-top: 20px;
+}
+
+/*コンテンツカラム:見出し4
+-----------------------------------------*/
+#mainContent main h4 {
+font-size: 18px;
+color: #603813;
+font-weight: normal;
+margin: 30px 0 15px;
+padding: 0 15px 10px 35px;
+border-bottom: 1px dotted #F15A24;
+position: relative;
+}
+#mainContent main h4:before {
+content: "■";
+position: absolute;
+top: 3px;
+left: 15px;
+font-size: 15px;
+}
+
+/*コンテンツカラム:見出し5（index.html 更新履歴用）
+-----------------------------------------*/
+#mainContent main .update article h4 {
+font-size: 14px;
+padding: 0 15px 10px 20px;
+}
+#mainContent main .update h4:before {
+top: 0;
+left: 5px;
+font-size: 12px;
+}
+#mainContent main .update time {
+margin: 0 0 5px 15px;
+display: block;
+font-size: 12px;
+}
+
+/*平文 & レイアウト
+-----------------------------------------*/
+p {
+margin-bottom: 1em;
+line-height: 160%;
+}
+section p {
+clear: both;
+}
+main div {
+float: left;
+margin: 0 25px 1em 0;
+}
+main p {
+margin: 0 0 1em 15px;
+}
+main article {
+margin-bottom: 2em;
+clear: both;
+}
+main article + article {
+border-top: 1px solid #F15A24;
+}
+
+/*普通のリスト
+-----------------------------------------*/
+main ul {
+margin: 0 0 0 1em;
+}
+main ul li {
+margin: 0 0 6px 0;
+}
+main ul li:before {
+content: "・";
+margin-left: -1em;
+}
+
+/*画像関連
+-----------------------------------------*/
+.img-wrapper,
+figure {
+background : #FFF;
+padding: 10px;
+margin: 0 0 15px 15px;
+float: left;
+font-size: 12px;
+}
+figure img {
+margin-bottom: 8px;
+}
+
+
+/*テーブル1（recipe.html）
+-----------------------------------------*/
+table.style1 {
+border-collapse: collapse;
+float: left;
+margin-top: .5em;
+margin-bottom: 2em;
+width: 100%;
+background: #F7E5B2;
+border: 10px solid #F7E5B2;
+}
+.style1 caption {
+font-size: 16px;
+font-weight: bold;
+text-align: left;
+margin-bottom: 10px;
+}
+.style1 tr {
+border-bottom: 1px dotted #F15A24;
+}
+.style1 td, .style1 th {
+padding: 15px 10px 5px;
+}
+.style1 th {
+white-space: nowrap;
+width: 1%;
+text-align: left;
+font-weight: normal;
+}
+table.style1 {
+margin-right: 35px;
+}
+div.img-wrapper + table.style1,
+figure + table.style1 {
+margin-right: 0;
+margin-left: 35px;
+}
+
+
+/*テーブル2（profile.html 上）
+-----------------------------------------*/
+table.style2 {
+border-collapse: collapse;
+position: relative;
+float: left;
+margin-bottom: 2em;
+width: 100%;
+}
+.style2 tr {
+border-bottom: 1px dotted #F15A24;
+}
+.style2 td, .style2 th {
+padding: 15px 10px 5px;
+}
+.style2 th {
+white-space: nowrap;
+width: 1%;
+text-align: left;
+font-weight: normal;
+}
+table.style2 {
+margin-right: 35px;
+}
+div.img-wrapper + table.style2,
+figure + table.style2 {
+margin-right: 0;
+margin-left: 35px;
+}
+
+/*テーブル3（profile.html 下）
+-----------------------------------------*/
+table.style3 {
+border-collapse: collapse;
+float: left;
+margin-bottom: 2em;
+width: 100%;
+}
+.style3 td, .style3 th {
+padding: 10px;
+border-bottom: 2px solid #FDF1CC;
+}
+.style3 th {
+white-space: nowrap;
+width: 1%;
+text-align: left;
+font-weight: normal;
+background: #603813;
+color: #FFF;
+}
+.style3 td {
+background: #FFF;
+}
+table.style3 {
+margin-right: 35px;
+}
+div.img-wrapper + table.style3,
+figure + table.style3 {
+margin-right: 0;
+margin-left: 35px;
+}
+table.style3 a {
+color: #FFF;
+}
+table.style3 a:hover {
+color: #FFF;
+opacity: .8;
+}
+
+/* サブ枠：ベース
+-----------------------------------------*/
+.sub {
+margin: 0 0 35px 0;
+padding: 15px 20px;
+width: 320px;
+float: right;
+background: #F7E5B2;;
+}
+
+/*サブ枠：ページ内リンクのリスト
+-----------------------------------------*/
+.sub ul {
+color: #603813;
+font-size: 12px;
+margin: 0 15px;
+}
+
+/* サブ枠：見出し
+-----------------------------------------*/
+#mainContent main .sub h4 {
+margin: 0px 0 15px;
+padding: 0;
+border-bottom: none;
+color: #ED1C24;
+}
+#mainContent main .sub h4:before {
+display: none;
+}
+
+/* サブ枠：figure, 画像
+-----------------------------------------*/
+.sub figure {
+background : none;
+padding: 0;
+margin: 0 0 25px 0;
+float: none;
+font-size: 12px;
+}
+.sub > img {
+margin-bottom: 25px;
+}
+.sub figure img {
+margin-bottom: 8px;
+}
+.sub figure h5 {
+margin-bottom: 3px;
+font-size: 12px;
+font-weight: normal;
+}
+
+

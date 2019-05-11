@@ -1,0 +1,156 @@
+<!DOCTYPE HTML>
+<!--[if lt IE 9 ]> <html lang="ja" class="ie8"> <![endif]--> 
+<!--[if IE 9 ]> <html lang="ja" class="ie9"> <![endif]--> 
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="ja"> <!--<![endif]-->
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<!-- ↓ページタイトル↓ -->
+<title>プロフィール｜Retro</title>
+
+<!-- ↓検索エンジン用ここから↓ -->
+<meta name="Description" content="検索用文言">
+<meta name="Keywords" content="検索用キーワードカンマ（,）区切り">
+<!-- ↑検索エンジン用ここまで↑-->
+
+<!-- ▼▼ここからは変更不可！！▼▼ -->
+<link rel="stylesheet" href="common/js/colorbox/colorbox.css">
+<link rel="stylesheet" href="common/css/common.css">
+
+<script src="common/js/jquery.min.js"></script>
+<script src="common/js/colorbox/jquery.colorbox-min.js"></script>
+<script src="common/js/jquery.tile.min.js"></script>
+<script src="common/js/common.js"></script>
+
+<script>
+jQuery(function() {
+$('a[href$=".jpg"],a[href$=".gif"],a[href$=".png"],a[href$=".jpeg"]').colorbox();
+
+$(window).load(function() {
+ $("#wrapper > div").tile();
+});
+
+});
+</script>
+<!--[if lt IE 9]>
+<script src="common/js/html5shiv.min.js"></script>
+<![endif]-->
+</head>
+
+<body id="top">
+<noscript>
+<p id="noscript">このWebサイトはJavaScriptを使用しています。
+<!--[if lt IE 9]><br>
+Internet Explorer 8をお使いの方はJavaScriptをオンにしてご覧ください。
+<![endif]-->
+</p>
+</noscript>
+<!-- ▲▲ここまでは変更不可！！▲▲ -->
+
+<div id="wrapper">
+<div id="sidebar">
+<header>
+<!-- ↓サイトロゴ画像↓ -->
+<h1><a href="index.html"><img src="img/logo.png" width="165" height="65" alt="RETRO"></a></h1>
+
+<!-- ↓ナビゲーションここから↓ -->
+<nav>
+<ul>
+  <li><a href="info.html">お知らせ</a></li>
+  <li class="here"><a href="profile.html">プロフィール</a></li>
+  <li><span>イベント・書籍の情報</span>
+    <!-- ↓↓サブメニューここから↓↓ -->
+    <ul>
+      <li><a href="event.html">イベント</a></li>
+      <li><a href="book.html">書籍</a></li>
+    </ul>
+    <!-- ↑↑サブメニューここまで↑↑ -->
+  </li>
+</ul>
+</nav>
+<!-- ↑ナビゲーションここまで↑ --> 
+
+<!-- ↓注意書き↓ -->
+<small>本サイトに掲載されている画像等、全ての内容の無断転載・引用を禁止します。</small>
+
+</header>
+</div>
+
+<div id="mainContent">
+<main>
+
+<header class="img">
+<!-- ↓メイン画像↓ -->
+<img src="img/profile01.jpg" width="800" height="500" alt="写真：お気に入り写真">
+<!-- ↓ページの見出し↓ -->
+<h1>プロフィール</h1>
+</header>
+
+<section>
+<!-- ↓プロフィール（表）ここから↓ -->
+<table>
+  <tr>
+    <th>HN</th>
+    <td>鈴木Ａ次<br>
+    尊敬する作家さんの名前から一部をいただきました。</td>
+  </tr>
+  <tr>
+    <th>生年月日</th>
+    <td>1976年2月12日<br>
+    リンカーンと同じ。アメリカでは祝日。</td>
+  </tr>
+  <tr>
+    <th>身長</th>
+    <td>178cm<br>
+    健康診断で1cm増えていたけど成長期終わってるし、何かの間違いだと思う。</td>
+  </tr>
+  <tr>
+    <th>血液型</th>
+    <td>O型<br>
+    Ｂ型とかAB型に間違われたことがあったけどA型って言われたことはない。</td>
+  </tr>
+  <tr>
+    <th>趣味</th>
+    <td>ゲーム<br>
+    主にオンラインゲーム。ログインできない時はちょっとイライラする（笑）</td>
+  </tr>
+  <tr>
+    <th>特技</th>
+    <td>歯みがき<br>
+    どこの歯医者に行っても毎回ほめられるのでガチです。</td>
+  </tr>
+  <tr>
+    <th>夢</th>
+    <td>夢の印税生活！！<br>
+    ま〜、なかなか難しいですよね。頑張ります。</td>
+  </tr>
+  <tr>
+    <th>座右の銘</th>
+    <td>諸行無常<br>
+    なんかカッコイイ。</td>
+  </tr>
+  <tr>
+    <th>ファンレター</th>
+    <td>PCの前で踊って喜ぶので、どんどん送ってね！！（笑）<br>
+    <a href="mailto:example@****">example@****</a></td>
+  </tr>
+</table>
+<!-- ↑プロフィール（表）ここまで↑ -->
+</section>
+
+</main>
+</div>
+</div>
+<!-- /#wrapper -->
+
+<footer>
+<!-- ↓コピーライト↓ --> 
+<small>© Retro</small>
+</footer>
+
+<!-- ↓ページの上に戻るボタン↓ -->
+<p id="goto-pagetop"><a href="#top">このページの上に戻る</a></p>
+
+</body>
+</html>

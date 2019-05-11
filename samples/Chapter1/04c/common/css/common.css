@@ -1,0 +1,547 @@
+@charset "UTF-8";
+
+/*基本設定
+-----------------------------------------*/
+* {
+margin: 0;
+padding: 0;
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+background: url(../img/trancepercent.png);
+}
+li {
+list-style: none;
+}
+a img {
+border: none;
+}
+html {
+}
+body {
+padding: 0;
+margin: 0;
+position: relative;
+font-size: 14px;
+color: #FFF;
+line-height: 1.2;
+font-family: "Hiragino Kaku Gothic Pro","メイリオ","ＭＳ Ｐゴシック",sans-serif;
+background: #5b4037;
+}
+main a {
+color: #FFF;
+font-weight: bold;
+}
+main a:hover {
+color: #cca295;
+}
+hr {
+border: none;
+height: 0;
+overflow: hidden;
+border-bottom: 1px dotted #959595;
+clear: both;
+}
+main, header, footer, section, article, figure ,figcaption {
+display: block;
+}
+body > header + div,
+body [id*="bg"] > header + div {
+width: 800px;
+margin: 0 auto;
+}
+body > header:after,
+body > header + div:after,
+body [id*="bg"] > header + div:after {
+content: "";
+display: block;
+clear: both;
+height: 0;
+width: 0;
+}
+
+/*ヘッダー
+-----------------------------------------*/
+body > header {
+}
+#main-img {
+background: #2d1305;
+position: relative;
+overflow: hidden;
+height: 470px;
+}
+#main-img img {
+position: absolute;
+top: 0;
+left: 50%;
+margin-left: -650px;
+}
+#site-info {
+background: #42210b;
+}
+#site-info > div {
+display: table;
+width: 800px;
+margin: 0 auto;
+}
+#site-info h1 {
+font-size: 80px;
+font-weight: normal;
+padding: 5px 2% 5px 0;
+display: table-cell;
+vertical-align: middle;
+color: #FFF;
+}
+#site-info h1 a,
+#site-info h1 a:hover {
+color: #FFF;
+text-decoration: none;
+}
+#site-info h1 + div {
+font-size: 12px;
+color: #998675;
+font-weight: normal;
+width: 1%;
+padding: 0 2% 0 0;
+display: table-cell;
+white-space: nowrap;
+vertical-align: middle;
+}
+#site-info h1 + div p {
+margin: 0;
+color: #998675;
+line-height: 1;
+display: inline;
+}
+#site-info h1 + div p.address {
+}
+#site-info h1 + div p.tel {
+font-size: 24px;
+}
+/*ヘッダー:メニュー
+-----------------------------------------*/
+#navigation {
+background: #2d1305;
+width: 100%;
+}
+nav {
+width: 800px;
+margin: 0 auto;
+}
+nav:after,
+nav > ul:after {
+content: "";
+display: block;
+clear: both;
+}
+nav > ul {
+border-left: 1px dotted #a0927f;
+float: right;
+}
+nav > ul > li {
+float: left;
+border-right: 1px dotted #a0927f;
+position: relative;
+}
+nav > ul > li > a {
+display: block;
+width: 100%;
+padding: 15px 20px;
+color: #c7b299;
+text-decoration: none;
+text-align: center;
+line-height: 1;
+position: relative;
+}
+nav > ul > li > a:hover,
+nav > ul > li.here > a {
+color: #FFF;
+}
+
+/*ヘッダー:メニュー 子メニュー
+-----------------------------------------*/
+nav > ul > li ul {
+display: none;
+position: absolute;
+left: 0;
+width: 200px;
+padding: 0;
+z-index: 9999;
+text-align: left;
+}
+nav > ul > li:hover ul {
+display: block;
+}
+nav > ul > li ul a {
+display: block;
+padding: 10px;
+color: #FFF;
+background: rgba(45, 19, 5, .8);
+text-decoration: none;
+border: 1px solid #FFF;
+border-top: none;
+}
+.ie8 nav > ul > li ul a {
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#BF2d1305', endColorstr='#BF2d1305',GradientType=0 );
+}
+nav > ul > li ul li:first-child a {
+border: 1px solid #FFF;
+}
+nav > ul > li ul a:hover {
+color: #FFF;
+background: rgba(94, 40, 10, .8);
+}
+.ie8 nav > ul > li ul a:hover {
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#BF5e280a', endColorstr='#BF5e280a',GradientType=0 );
+}
+
+/*フッター
+-----------------------------------------*/
+footer {
+clear: both;
+margin: 0;
+}
+footer small {
+display: block;
+font-size: 16px;
+text-align: center;
+line-height: 100px;
+width: 100%;
+height: 100px;
+color: #FFF;
+font-family: Arial,sans-serif;
+background: #42210b;
+border-bottom: 60px solid #2d1305;
+-webkit-box-sizing: content-box;
+-moz-box-sizing: content-box;
+box-sizing: content-box;
+}
+
+/*noscript
+-----------------------------------------*/
+p#noscript {
+width: 80%;
+padding: 30px;
+margin: 0 auto;
+color: red;
+font-weight: bold;
+}
+
+/*ベースレイアウト系
+-----------------------------------------
+-----------------------------------------*/
+main {
+padding: 0 0 120px 0;
+}
+body section {
+padding: 30px 0;
+margin: 0;
+position: relative;
+}
+section.imgList {
+padding: 30px 0 0;
+border-bottom: 1px dotted #FFF;
+}
+body section + section {
+}
+article {
+margin: 0 0 25px;
+padding-bottom: 10px;
+position: relative;
+border-bottom: 1px dotted #FFF;
+}
+section.imgList article,
+section.access article {
+border-bottom: none;
+}
+article:last-child {
+margin: 0;
+}
+main:after,
+section:after,
+article:after {
+content: "";/*IE対策のため全角スペース*/
+display: block;
+clear: both;
+}
+.clear {
+clear: both;
+}
+
+/*大見出し
+-----------------------------------------*/
+section > header,
+section > header h1 {
+}
+section > header {
+}
+section > header h1 {
+border-bottom: 1px solid #FFF;
+font-size: 36px;
+font-weight: normal;
+padding: 0 0 3px;
+margin: 50px 0 35px;
+}
+section > header h1 span {
+font-size: 18px;
+}
+
+/*中見出し
+-----------------------------------------*/
+section header {
+margin: 0 0 20px;
+font-weight: normal;
+position: relative;
+clear: both;;
+}
+section header h2 {
+padding: 0;
+font-size: 20px;
+font-weight: normal;
+position: relative;
+}
+section article header h2 {
+margin: 0 100px 0 0;
+}
+section article header time {
+font-size: 12px;
+position: absolute;
+bottom: 0;
+right: 10px;
+}
+
+
+/*平文
+-----------------------------------------*/
+p {
+margin-bottom: 1em;
+line-height: 160%;
+}
+section p {
+clear: both;
+}
+section > div,
+.theme-tmp + div {
+display: block;
+clear:both;
+margin: 20px 35px 2em;
+}
+section > div {
+margin: 0 0 3.5em;
+}
+
+/*画像
+-----------------------------------------*/
+main img {
+margin: 0 35px 20px;
+vertical-align: bottom;
+}
+main section > img {
+margin: 0 0 20px;
+}
+
+/* 画像配置（キャプション入り）
+-----------------------------------------*/
+figure {
+font-size: 12px;
+}
+figure img,
+.imgList article img {
+margin: 0 0 5px;
+}
+
+/* 文章＋画像設定
+-----------------------------------------*/
+section > figure,
+section  > figure + figure,/*画像一覧*/
+article figure,/*画像配置（キャプションあり）*/
+article div > img,/* 画像配置（キャプションなし）*/
+article > img,/*画像が見出しと同列になるタイプ（キャプションなし）*/
+.imgList article /* imgList*/{
+float: left;
+margin: 0 35px 20px 0;
+}
+article figure + div,/*画像配置（キャプションあり）*/
+article div > img + div/* 画像配置（キャプションなし）*/{
+float: left;
+}
+article > header + div:after {
+content: "";
+display: block;
+clear: both;
+}
+figure.endOfLine,
+.imgList article.endOfLine/*画像一覧:行末*/ {
+margin-right: 0;
+}
+
+.imgList article h1 {
+font-size: 16px;
+font-weight: normal;
+margin: 0 0 3px;
+}
+.imgList article p {
+line-height: 140%;
+margin: 0 0 3px;
+}
+.imgList article p.price {
+font-size: 18px;
+display: block;
+margin: 0;
+text-align: right;
+font-weight: bold;
+}
+
+/*逆レイアウト*/
+article.reverse figure,/*画像配置（キャプションあり）*/
+article.reverse div > img,/*画像配置（キャプションなし）*/
+article.reverse > img/*画像が見出しと同列になるタイプ（キャプションなし）*/ {
+float: right;
+margin: 0 0 20px 35px;
+}
+
+/* 画像が見出しと同列になるタイプ
+-----------------------------------------*/
+section article > figure + div,/*キャプションあり*/
+section article > img + div/*キャプションなし*/ {
+float: left;
+}
+section div header h2 {
+margin: 0;
+}
+/*逆レイアウト*/
+section article.reverse > figure + div,/*キャプションあり*/
+section article.reverse > img + div/*キャプションなし*/ {
+float: right;
+}
+
+/* 枠付き記事
+-----------------------------------------*/
+section.frame article {
+border: 1px solid #998675;
+}
+section.frame article img + div,
+section.frame article figure + div {
+border-left: 1px dotted #998675;
+}
+section.frame article img,
+section.frame article figure {
+margin: 20px;
+}
+section.frame article figure img {
+margin: 0 0 5px 0;
+}
+section.frame article header {
+border-top: none;
+border-left: none;
+border-right: none;
+}
+section.frame div header h2 {
+margin-right: 100px;
+}
+section.frame article p {
+margin: 1em;
+}
+/*逆レイアウト*/
+section.frame article.reverse > figure + div,/*キャプションあり*/
+section.frame article.reverse > img + div/*キャプションなし*/ {
+border-left: none;
+border-right: 1px dotted #998675;
+}
+
+/*普通のリスト
+-----------------------------------------*/
+main ul {
+margin: 0 0 0 1em;
+}
+main ul li {
+margin: 0 0 6px 0;
+}
+main ul li:before {
+content: "・";
+margin-left: -1em;
+}
+
+/* テーブル
+-----------------------------------------*/
+table {
+border-spacing: 0;
+border-collapse: collapse;
+margin: 0 0 10px 0;
+}
+table caption {
+text-align:left;
+font-weight: bold;
+}
+td, th {
+border-bottom: 1px #FFF dotted;
+padding: 20px 5px 10px;
+}
+th {
+text-align:left;
+white-space: nowrap;
+width: 1%;
+font-weight:normal;
+font-size: 16px;
+}
+
+
+/* Shop用
+-----------------------------------------*/
+section.access {
+margin-bottom: 0px;
+}
+section.access div.mapData {
+float: left;
+width: 480px;
+margin: 0 35px 25px 0;
+}
+section.access div.mapData img {
+float: left;
+margin: 0;
+}
+section.access div.mapData img[width="230"] {
+margin: 20px 20px 0 0;
+}
+section.access div.mapData img[width="230"] + img {
+margin: 20px 0 0 0;
+}
+section.access div.infoData {
+float: left;
+width: 285px;
+margin: 0 0 25px;
+}
+section.access div.infoData table {
+margin: 0 0 25px;
+}
+section.access div p {
+clear: both;
+display: block;
+}
+
+.mini {
+font-size: 12px;
+}
+
+.fixed {
+position: fixed;
+top: 0;
+z-index: 9999;
+}
+
+/*パララックス背景 #bg3が手前、#bg1が奥
+-----------------------------------------*/
+#bg1 {
+background:  url(../img/back01.png);
+}
+#bg2 {
+background:  url(../img/back02.png);
+}
+#bg3 {
+background:  url(../img/back03.png);
+}
+
+
+
+
+

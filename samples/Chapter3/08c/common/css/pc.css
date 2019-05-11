@@ -1,0 +1,100 @@
+@charset "UTF-8";
+
+/* PC
+--------------------------------------------*/
+html {
+}
+/* PC：ヘッダー
+-----------------------------------------*/
+header#top {
+}
+header#top h1 {
+padding: 15px 3% 5px;
+width: 1000px;
+margin: 0 auto;
+}
+header#top nav + img {
+display: block;
+width: 1000px;
+margin: 0 auto;
+}
+header#top .banner {
+right: 50%;
+margin-right: -470px;
+}
+header#top img {
+margin: 0;
+width: 100%;
+}
+/* PC：ヘッダー：メニュー
+-----------------------------------------*/
+nav {
+width: 1000px;
+margin: 0 auto;
+/*background: #DCDDDD url(../img/back-menu.png) repeat-x top;*/
+}
+nav button {
+top: -55px;
+}
+body.touchDevice nav button {
+display: block;
+}
+nav button#swPC {
+left: auto;
+right: 10px;
+}
+nav button#swSP {
+left: auto;
+right: 70px;
+}
+/* PC：ベース
+-----------------------------------------*/
+section {
+width: 1000px;
+margin: 0 auto;
+}
+/*大見出し
+-----------------------------------------*/
+section h1 {
+text-align: left;
+padding-left: 10px;
+}
+/* PC：画像
+-----------------------------------------*/
+.textImg article img {
+width: 57%;
+margin: 0 0 10px 3%;
+float: right;
+}
+.textImg article div {
+width: 40%;
+margin: 0 0 10px;
+float: left;
+}
+/* PC：Googleマップ
+-----------------------------------------*/
+.google-map {
+padding-bottom: 45%; /*縦横比*/
+width: 60%;
+}
+
+/* バナー置き場
+-----------------------------------------*/
+section.banner,
+section.banner-img {
+width: 100%;
+}
+.banner div,
+.banner-img div {
+width: 1000px;
+margin: 0 auto;
+}
+.banner a {
+width: 300px;
+margin: 5px 10px;
+}
+.banner a:hover {
+}
+.banner-img img {
+
+}

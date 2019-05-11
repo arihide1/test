@@ -1,0 +1,356 @@
+@charset "UTF-8";
+
+/*基本設定
+-----------------------------------------*/
+* {
+margin: 0;
+padding: 0;
+font-weight: normal;
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+}
+li {
+list-style: none;
+}
+a img {
+border: none;
+vertical-align: middle;
+}
+html {
+}
+body {
+padding: 0;
+margin: 0;
+position: relative;
+font-size: 14px;
+color: #FFF;
+line-height: 1.2;
+font-family: "Hiragino Kaku Gothic Pro","メイリオ","ＭＳ Ｐゴシック",sans-serif;
+background: #B02234 url(../img/back.png);
+-webkit-text-size-adjust: 100%;
+}
+a {
+color: #FFF;
+}
+a:hover {
+color: #FFF;
+opacity: .7;
+}
+hr {
+border: none;
+height: 0;
+overflow: hidden;
+border-bottom: 1px dotted #959595;
+clear: both;
+}
+main, header, footer, section, article, figure ,figcaption {
+display: block;
+}
+body > header:after,
+body > header + div:after,
+article:after,
+ul:after {
+content: "";
+display: block;
+clear: both;
+height: 0;
+width: 0;
+}
+
+/*ヘッダー
+-----------------------------------------*/
+body > header {
+position: relative;
+background: url(../../img/index01.jpg) no-repeat bottom center;
+background-size: cover;
+}
+body.touchDevice > header {
+padding-top: 30px; 
+}
+section > div {
+padding: 3% 3% 3em;
+}
+body > header #header-wrapper {
+padding: 3%;
+background: rgba(255, 255, 255, .6);
+color: #42210B;
+}
+.ie8 body > header #header-wrapper {
+background: url(../img/back-ie8_01.png);
+}
+body > header button {
+width: 50%;
+height: 35px;
+position: absolute;
+top: 0;
+display: none;
+background: #42210B;
+border: none;
+border-top: 1px solid #999;
+border-left: 1px solid #666;
+color: #FFF;
+font-size: 14px;
+}
+body.touchDevice > header button {
+display: block;
+}
+body > header button#swPC {
+left: 0;
+}
+body > header button#swSP {
+right: 0;
+}
+body > header h1 {
+font-size: 36px;
+text-align: center;
+margin-bottom: 10px;
+}
+body > header h2 {
+font-size: 14px;
+margin-bottom: 10px;
+font-weight: normal;
+}
+body > header nav {
+font-size: 20px;
+}
+body > header nav > ul > li {
+text-align: center;
+margin-bottom: 5px;
+position: relative;
+}
+body > header nav > ul > li > a,
+body > header nav li span {
+display: block;
+padding: 10px;
+text-decoration: none;
+color: #42210B;
+}
+body > header nav li a:hover {
+color: #B02334;
+background: rgba(255, 255, 255, .3);
+opacity: 1;
+}
+.ie8 body > header nav li a:hover {
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#40FFFFFF', endColorstr='#40FFFFFF',GradientType=0 );
+background-image: url(../img/trancepercent.png);
+}
+body > header nav li ul {
+width: 100%;
+text-align: left;
+background: rgba(255, 255, 255, .3);
+padding: 10px;
+}
+.ie8 body > header nav li ul {
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#40FFFFFF', endColorstr='#40FFFFFF',GradientType=0 );
+background-image: url(../img/trancepercent.png);
+}
+body > header nav li ul li,
+body > header nav li ul li a {
+display: inline-block;
+color: #42210B;
+text-decoration: none;
+}
+body > header nav li ul li a:hover {
+background: none;
+opacity: 1;
+color: #B02334;
+}
+body > header nav li ul li:after {
+content: "｜";
+}
+/*フッター
+-----------------------------------------*/
+footer {
+clear: both;
+}
+footer small {
+display: block;
+text-align: center;
+font-size: 12px;
+line-height: 30px;
+background: #42210B;
+width: 100%;
+height: 30px;
+color: #FFF;
+font-family: sans-serif;
+}
+
+
+/*noscript
+-----------------------------------------*/
+p#noscript {
+width: 80%;
+padding: 30px;
+margin: 0 auto;
+color: red;
+font-weight: bold;
+}
+
+/*ベースレイアウト系
+-----------------------------------------
+-----------------------------------------*/
+section {
+background: #B02234 url(../img/back.png);
+}
+section.odd {
+background: #EFE8DF;
+color: #333;
+}
+section.odd a {
+color: #C1272D;
+}
+section.odd a:hover {
+color: #FC343A;
+opacity: 1;
+}
+section.secNo1 {
+}
+section.secNo2 {
+}
+section.secNo3 {
+}
+article {
+padding: 20px 0;
+}
+.text article {
+border-bottom: 1px dotted #FFF;
+padding: 10px 0;
+margin-bottom: 20px;
+}
+section.odd.text article {
+border-bottom: 1px dotted #808080;
+}
+
+
+/*大見出し
+-----------------------------------------*/
+section h1 {
+margin-top:20px;
+margin-bottom:10px;
+font-size: 24px;
+text-align: center;
+font-weight: normal;
+background: url(../img/icon01.png) no-repeat top center;
+background-size: 26px;
+padding-top: 30px;
+}
+section.odd h1 {
+background-image: url(../img/icon02.png);
+color: #603813;
+}
+
+/*中見出し
+-----------------------------------------*/
+section header {
+margin-bottom:10px;
+}
+section h2 {
+font-size: 16px;
+color: #F0E5AA;
+}
+section.odd h2 {
+color: #603813;
+}
+section time {
+display: block;
+font-size: 12px;
+text-align: right;
+margin-top:3px;
+}
+section.odd time {
+color: #4D4D4D;
+}
+
+
+/*画像
+-----------------------------------------*/
+article img {
+width: 100%;
+margin-bottom: 10px; 
+}
+
+
+/*平文
+-----------------------------------------*/
+p {
+margin: 20px 35px 35px;
+line-height: 160%;
+}
+section p {
+margin: 1em 0;
+}
+article p.price {
+text-align: right;
+margin-top: -.5em;
+font-size: 18px;
+}
+
+/*普通のリスト
+-----------------------------------------*/
+main ul {
+margin: 0 0 0 1em;
+}
+main ul li {
+margin: 0 0 6px 0;
+}
+main ul li:before {
+content: "・";
+margin-left: -1em;
+}
+
+
+/* テーブル
+-----------------------------------------*/
+table {
+border-spacing: 0;
+border-collapse: collapse;
+margin: 0 0 10px 0;
+}
+table caption {
+text-align:left;
+}
+td, th {
+border-bottom: 1px #FFF dotted;
+padding: 20px 5px 10px;
+vertical-align: top;
+}
+th {
+text-align:left;
+white-space: nowrap;
+width: 1%;
+font-weight:normal;
+}
+section.odd td, section.odd th {
+border-bottom: 1px #333 dotted;
+}
+
+/*このページの上へ戻る
+-----------------------------------------*/
+section {
+position: relative;
+}
+section a[href="#top"] {
+position: absolute;
+bottom: 10px;
+left: 10px;
+}
+
+/* Googleマップ
+-----------------------------------------*/
+.google-map {
+position: relative;
+padding-bottom: 75%; /*縦横比*/
+height: 0;
+overflow: hidden;
+margin-bottom: 10px;
+}
+.google-map iframe {
+position: absolute;
+top: 0;
+left: 0;
+width: 100% !important;
+height: 100% !important;
+}
+
+

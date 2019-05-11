@@ -1,0 +1,173 @@
+@charset "UTF-8";
+
+/* Android 4 のバグ対策
+-----------------------------------------*/
+* {
+background-image: url(../img/trancepercent.png); 
+}
+
+/* タブレット
+--------------------------------------------*/
+
+/* タブレット：ヘッダー
+-----------------------------------------*/
+body > header #header-wrapper {
+}
+body > header #header-wrapper h1 {
+text-align: left;
+}
+body > header #header-wrapper h2 {
+line-height: 1.6;
+}
+
+/* タブレット：ヘッダー：メニュー
+-----------------------------------------*/
+body > header nav > ul > li {
+text-align: left;
+margin-bottom: 5px;
+float: left;
+z-index: 10;
+}
+body > header nav > ul > li > a,
+body > header nav li span {
+display: block;
+border: none;
+background: none;
+display: block;
+margin-bottom: 2px;
+}
+body > header nav > ul > li > a:hover,
+body > header nav > ul > li > span:hover {
+color: #FFF;
+background: rgba(255, 255, 255, .3);
+}
+.ie8 body > header nav > ul > li > a:hover,
+.ie8 body > header nav > ul > li > span:hover {
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#40FFFFFF', endColorstr='#40FFFFFF',GradientType=0 );
+}
+body > header nav li a:hover {
+background: none;
+}
+/* タブレット：ヘッダー：メニュー 子メニュー
+-----------------------------------------*/
+body > header nav li ul {
+width: 200px;
+border: none;
+padding: 0;
+position: absolute;
+background: none;
+z-index: 1000;
+}
+body > header nav li ul li {
+display: block;
+padding: 0;
+}
+body > header nav li ul li a {
+display: block;
+color: #000;
+margin-bottom: 2px;
+padding: 10px;
+background: rgba(255, 255, 255, .5);
+text-decoration: none;
+}
+.ie8 body > header nav li ul li a {
+margin-bottom: 0;
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3FFFFFFF', endColorstr='#3FFFFFFF',GradientType=0 );
+}
+body > header nav li ul li a:hover {
+color: #FFF;
+background: rgba(200, 170, 78, .7);
+}
+.ie8 body > header nav li ul li a:hover {
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7FC8AA4E', endColorstr='#7FC8AA4E',GradientType=0 );
+}
+body > header nav li ul li:after {
+content: "";/* スマホの子メニューの区切り打ち消し*/
+}
+body.touchDevice nav button {
+display: none;
+}
+
+/* タブレット：ベース
+-----------------------------------------*/
+article {
+/*margin-bottom:30px;*/
+}
+/* タブレット：大見出し
+-----------------------------------------*/
+section h1 {
+padding: 0 0 0 25px;
+text-align: left;
+background: url(../img/icon.png) no-repeat left top;
+background-size: 22px;
+}
+section h1:after {
+content: "";
+display: block;
+height: 1px;
+border-top: 2px solid #DBC774;
+border-bottom: 2px solid #75662B;
+margin: 3px 0 0 -25px;
+}
+
+/* タブレット：中見出し
+-----------------------------------------*/
+section header {
+position: relative;
+}
+section h2 {
+margin: 0 90px 0 0;
+font-size: 18px;
+}
+section time {
+position: absolute;
+right: 0;
+bottom: 3px;
+}
+/* タブレット：画像
+-----------------------------------------*/
+article img {
+width: 47%;
+margin: 0 0 10px 3%;
+float: right;
+}
+article img + header,
+article img + header + p {
+width: 50%;
+}
+article img + header h2 {
+margin: 0;
+}
+article p + strong {
+display: block;
+font-weight: bold;
+text-align: right;
+}
+
+article.reverse img {
+margin: 0 3% 10px 0;
+float: left;
+}
+article.reverse img + header,
+article.reverse img + header + p {
+float: right;
+}
+article.reverse p + strong {
+text-align: left;
+}
+
+/* タブレット：Googleマップ
+-----------------------------------------*/
+.google-map {
+padding-bottom: 35%; /*縦横比*/
+margin-right: 3%;
+width: 50%;
+float: left;
+}
+
+/* タブレット：テーブル
+-----------------------------------------*/
+table + p {
+clear: both;
+}
+

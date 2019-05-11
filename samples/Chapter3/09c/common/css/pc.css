@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+/* PC
+--------------------------------------------*/
+body > header,
+section > div {
+width: 1000px;
+margin: 0 auto;
+}
+footer {
+text-align: right;
+}
+footer > a {
+margin-left: 0;
+margin-right: 10px; 
+}
+body.touchDevice nav button {
+display: block;
+}
+section h1:after {
+margin: 7px 0 0 -35px;
+}
+section a[href="#top"] {
+left: auto;
+right:10%;
+}
+.google-map {
+padding-bottom: 45%; /*縦横比*/
+width: 60%;
+}

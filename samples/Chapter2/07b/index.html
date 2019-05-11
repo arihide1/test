@@ -1,0 +1,153 @@
+<!DOCTYPE HTML>
+<!--[if lt IE 9 ]> <html lang="ja" class="ie8"> <![endif]--> 
+<!--[if IE 9 ]> <html lang="ja" class="ie9"> <![endif]--> 
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="ja"> <!--<![endif]-->
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<!-- ↓ページタイトル↓ -->
+<title>Retro</title>
+
+<!-- ↓検索エンジン用ここから↓ -->
+<meta name="Description" content="検索用文言">
+<meta name="Keywords" content="検索用キーワードカンマ（,）区切り">
+<!-- ↑検索エンジン用ここまで↑-->
+
+<!-- ▼▼ここからは変更不可！！▼▼ -->
+<link rel="stylesheet" href="common/js/nivo-slider/themes/tmp/tmp.css">
+<link rel="stylesheet" href="common/js/nivo-slider/nivo-slider.css">
+<link rel="stylesheet" href="common/js/colorbox/colorbox.css">
+<link rel="stylesheet" href="common/css/common.css">
+
+<script src="common/js/jquery.min.js"></script>
+<script src="common/js/nivo-slider/jquery.nivo.slider.pack.js"></script>
+<script src="common/js/colorbox/jquery.colorbox-min.js"></script>
+<script src="common/js/jquery.tile.min.js"></script>
+<script src="common/js/common.js"></script>
+
+<script>
+jQuery(function() {
+$('#slider').nivoSlider({
+effect:'random', // 切り替えアニメーションの種類 random sliceDown sliceDownLeft sliceUp sliceUpLeft sliceUpDown sliceUpDownLeft fold fade random slideInRight slideInLeft boxRandom boxRain boxRainReverse boxRainGrow boxRainGrowReverse
+pauseTime:3000, // 切り替えまでの時間(ミリ秒)
+directionNavHide:true // マウスが重なった時のみナビを表示
+});
+
+$('a[href$=".jpg"],a[href$=".gif"],a[href$=".png"],a[href$=".jpeg"]').colorbox();
+
+$(window).load(function() {
+$("#wrapper > div").tile();
+$("dl.two").tile();
+});
+
+});
+</script>
+<!--[if lt IE 9]>
+<script src="common/js/html5shiv.min.js"></script>
+<![endif]-->
+</head>
+
+<body id="top" class="top">
+<noscript>
+<p id="noscript">このWebサイトはJavaScriptを使用しています。
+<!--[if lt IE 9]><br>
+Internet Explorer 8をお使いの方はJavaScriptをオンにしてご覧ください。
+<![endif]-->
+</p>
+</noscript>
+<!-- ▲▲ここまでは変更不可！！▲▲ -->
+
+<div id="wrapper">
+<div id="sidebar">
+<header>
+<!-- ↓サイトロゴ画像↓ -->
+<h1><a href="index.html"><img src="img/logo.png" width="165" height="65" alt="RETRO"></a></h1>
+
+<!-- ↓ナビゲーションここから↓ -->
+<nav>
+<ul>
+  <li><a href="info.html">お知らせ</a></li>
+  <li><a href="profile.html">プロフィール</a></li>
+  <li><span>イベント・書籍の情報</span>
+    <!-- ↓↓サブメニューここから↓↓ -->
+    <ul>
+      <li><a href="event.html">イベント</a></li>
+      <li><a href="book.html">書籍</a></li>
+    </ul>
+    <!-- ↑↑サブメニューここまで↑↑ -->
+  </li>
+</ul>
+</nav>
+<!-- ↑ナビゲーションここまで↑ --> 
+
+<!-- ↓注意書き↓ -->
+<small>本サイトに掲載されている画像等、全ての内容の無断転載・引用を禁止します。</small>
+
+</header>
+</div>
+
+<div id="mainContent">
+<main>
+<!-- ↓メイン画像（スライダー）ここから↓ --> 
+<div class="theme-tmp">
+<div id="slider"> 
+<!-- ↓↓画像1枚目↓↓ --> 
+<img src="img/index01.jpg" alt="写真：キンギョ" width="900" height="500"> 
+<!-- ↓↓画像2枚目↓↓ --> 
+<img src="img/index02.jpg" alt="写真：長屋" width="900" height="500">
+<!-- ↓↓画像3枚目↓↓ --> 
+<img src="img/index03.jpg" alt="写真：井戸のポンプ" width="900" height="500"> 
+</div>
+</div>
+<!-- ↑メイン画像（スライダー）ここまで↑ --> 
+
+<aside>
+<!-- ↓ページリンクのバナーここから↓ --> 
+<dl class="one">
+<dt>
+<a href="book.html">
+<img src="img/index04.jpg" width="320" height="70" alt="バナー：写真集">
+</a>
+</dt>
+<!-- ↓説明文↓ --> 
+<dd>「夏」がテーマ！写真集を発売中！！<br>
+4,980円（税込）</dd>
+</dl>
+<!-- ↑ページリンクのバナーここまで↑ --> 
+
+<!-- ↓リンクバナー1ここから↓ --> 
+<dl class="two">
+<dt>
+<a href="#" target="_blank">
+<img src="common/img/twitter.png" width="40" height="40" alt="Twitter">
+</a>
+</dt>
+<dd>Twitterで情報発信中！</dd>
+</dl>
+<!-- ↑リンクバナー1ここまで↑ --> 
+
+<!-- ↓リンクバナー2ここから↓ --> 
+<dl class="two">
+<dt>
+<a href="#" target="_blank">
+<img src="common/img/facebook.png" width="40" height="40" alt="Facebook">
+</a>
+</dt>
+<dd>Facebookも更新中！</dd>
+</dl>
+<!-- ↑リンクバナー2ここまで↑ --> 
+</aside>
+
+</main>
+</div>
+</div>
+<!-- /#wrapper -->
+
+<footer>
+<!-- ↓コピーライト↓ --> 
+<small>© Retro</small>
+</footer>
+
+</body>
+</html>
